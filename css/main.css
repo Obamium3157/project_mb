@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(246, 240, 240);
+}
+
+.settings {
+    text-align: center;
+    font-size: 3.5rem;
+}
+
+h3 {
+    text-align: center;
+}
+
+.color {
+    text-align: center;
+}
+
+.c_grid_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
