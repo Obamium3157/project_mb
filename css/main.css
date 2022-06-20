@@ -19,3 +19,11 @@ h3 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+
+.c_grid_item {
+    margin-left: 27%;
+}
+
+.start {
+    text-align: center;
+}

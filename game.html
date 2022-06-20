@@ -6,6 +6,8 @@
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="css/game.css">
 
+    <script src="js/col.js"></script>
+
     <title>Snake Game</title>
 </head>
 
@@ -24,8 +26,8 @@
 
     const board_border = 'black';
     const board_background = "white";
-    var snake_col = 'lightblue';
-    var snake_border = 'darkblue';
+    var snake_col = get_col();
+    var snake_border = get_border();
 
     let snake = [
         { x: 200, y: 200 },

@@ -18,6 +18,8 @@
         integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
         crossorigin="anonymous"></script>
 
+    <script src="js/col.js"></script>
+
     <title>Document</title>
 </head>
 
@@ -40,7 +42,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Жёлтый</h5>
                         <p class="card-text">Забавно, что именно в этой расцветке была моя первая змейка.</p>
-                        <a href="#" class="btn btn-primary">Выбрать</a>
+                        <a href="#" class="btn btn-primary" onclick="set_col(0, 0)">Выбрать</a>
                     </div>
                 </div>
             </div>
@@ -50,7 +52,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Светло-синий с тёмно-голубой рамкой</h5>
                         <p class="card-text">Немного напоминает ретро-стиль</p>
-                        <a href="#" class="btn btn-primary">Выбрать</a>
+                        <a href="#" class="btn btn-primary" onclick="set_col(1, 1)">Выбрать</a>
                     </div>
                 </div>
             </div>
@@ -67,9 +69,9 @@
         </div>
     </div>
 
-    <br>
-    <h3>Цвет яблока</h3>
-    <br>
+    <div class="start">
+        <a href="game.html" class="btn btn-primary btn-lg">Начать играть</a>
+    </div>
 </body>
 
 </html>
