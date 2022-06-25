@@ -35,38 +35,50 @@
     <br>
 
     <div class="color">
-        <div class="c_grid_container">
-            <div class="c_grid_item">
-                <div class="card" style="width: 18rem;">
-                    <img src="img/yel.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Жёлтый</h5>
-                        <p class="card-text">Забавно, что именно в этой расцветке была моя первая змейка.</p>
-                        <a href="#" class="btn btn-primary" onclick="set_col(0, 0)">Выбрать</a>
-                    </div>
-                </div>
-            </div>
-            <div class="c_grid_item">
-                <div class="card" style="width: 18rem;">
-                    <img src="img/bb.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Светло-синий с тёмно-голубой рамкой</h5>
-                        <p class="card-text">Немного напоминает ретро-стиль</p>
-                        <a href="#" class="btn btn-primary" onclick="set_col(1, 1)">Выбрать</a>
-                    </div>
-                </div>
-            </div>
-            <div class="c_grid_item">
-                <div class="card" style="width: 18rem;">
-                    <img src="img/annoying_dug.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">?</h5>
-                        <p class="card-text">?</p>
-                        <a href="#" class="btn btn-primary" onclick="alert('What da dug doin')">Выбрать</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!--        <div class="c_grid_container">-->
+<!--            <div class="c_grid_item">-->
+<!--                <div class="card" style="width: 18rem;">-->
+<!--                    <img src="img/yel.png" class="card-img-top" alt="...">-->
+<!--                    <div class="card-body">-->
+<!--                        <h5 class="card-title">Жёлтый</h5>-->
+<!--                        <p class="card-text">Забавно, что именно в этой расцветке была моя первая змейка.</p>-->
+<!--                        <a href="#" class="btn btn-primary" onclick="set_col(0, 0)">Выбрать</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="c_grid_item">-->
+<!--                <div class="card" style="width: 18rem;">-->
+<!--                    <img src="img/bb.png" class="card-img-top" alt="...">-->
+<!--                    <div class="card-body">-->
+<!--                        <h5 class="card-title">Светло-синий с тёмно-голубой рамкой</h5>-->
+<!--                        <p class="card-text">Немного напоминает ретро-стиль</p>-->
+<!--                        <a href="#" class="btn btn-primary" onclick="set_col(1, 1)">Выбрать</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="c_grid_item">-->
+<!--                <div class="card" style="width: 18rem;">-->
+<!--                    <img src="img/annoying_dug.png" class="card-img-top" alt="...">-->
+<!--                    <div class="card-body">-->
+<!--                        <h5 class="card-title">?</h5>-->
+<!--                        <p class="card-text">?</p>-->
+<!--                        <a href="#" class="btn btn-primary" onclick="alert('What da dug doin')">Выбрать</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+        <select onchange="switch (this.selectedIndex) {
+    case 0: set_col('yellow'); break;
+    case 1: set_col('lightblue'); break;
+    case 2: set_col('red'); break;
+    case 3: set_col('blue'); break;
+}" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            <option onselect="set_col('yellow')" value="1">Жёлтый</option>
+            <option onselect="set_col('lightblue')" value="2">Светло-синий</option>
+            <option onselect="set_col('red')" value="3">Красный</option>
+            <option onselect="set_col('blue')" value="4">Голубой</option>
+        </select>
     </div>
 
     <div class="start">

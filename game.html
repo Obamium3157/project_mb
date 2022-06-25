@@ -20,14 +20,19 @@
 
     <div id="score">0</div>
     <canvas id="snakeboard" width="400" height="400"></canvas>
+
+<style>
+</style>
 </body>
 
 <script>
 
     const board_border = 'black';
     const board_background = "white";
-    var snake_col = get_col();
-    var snake_border = get_border();
+    const snake_col = sessionStorage.getItem('color')
+    const snake_border = sessionStorage.getItem('border')
+    alert(sessionStorage.getItem('color'))
+    alert(sessionStorage.getItem('border'))
 
     let snake = [
         { x: 200, y: 200 },
