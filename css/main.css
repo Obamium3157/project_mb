@@ -24,6 +24,27 @@ h3 {
     margin-left: 27%;
 }
 
+.view {
+    transition-duration: 2s;
+    display: grid;
+    border: 0.3mm solid black;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+
+    grid-template-columns: 1fr 1fr;
+}
+
+#view_color {
+    width: 300px;
+    height: 300px;
+    margin: 10px 30%;
+}
+
+.description {
+
+}
+
 .start {
     text-align: center;
 }
