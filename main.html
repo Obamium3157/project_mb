@@ -38,27 +38,41 @@
 
     <div class="color">
         <select onchange="switch (this.selectedIndex) {
-    case 0: set_col('yellow'); break;
-    case 1: set_col('lightblue'); break;
-    case 2: set_col('red'); break;
-    case 3: set_col('blue'); break;
+    case 0: {
+        set_col('yellow')
+        sizeUP('view_color1')
+        break
+    }
+    case 1: {
+        set_col('lightblue')
+        sizeUP('view_color2')
+        break
+    }
+    case 2: {
+        set_col('red')
+        sizeUP('view_color3')
+        break
+    }
+    case 3: {
+        set_col('blue')
+        sizeUP('view_color4')
+        break
+    }
 }" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-            <option onselect="set_col('yellow')" value="1">Жёлтый</option>
-            <option onselect="set_col('lightblue')" value="2">Светло-синий</option>
-            <option onselect="set_col('red')" value="3">Красный</option>
-            <option onselect="set_col('blue')" value="4">Синий</option>
+            <option value="1">Жёлтый</option>
+            <option value="2">Светло-синий</option>
+            <option value="3">Красный</option>
+            <option value="4">Синий</option>
         </select>
     </div>
 
     <br>
 
     <div class="view">
-        <img id="view_color" src="img/annoying_dug.png" alt="Failed to load image">
-
-        <div class="description">
-            <h1>Цвет</h1>
-            <p>Короткая сводка</p>
-        </div>
+        <img id="view_color1" src="img/yel.png" alt="Failed to load image">
+        <img id="view_color2" src="img/bb.png" alt="Failed to load image">
+        <img id="view_color3" src="img/red.png" alt="Failed to load image">
+        <img id="view_color4" src="img/blue.png" alt="Failed to load image">
     </div>
 
     <div class="start">

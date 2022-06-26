@@ -27,9 +27,16 @@
 
 <script>
 
+    function setItem() {
+        if(sessionStorage.getItem('color') == null)
+            return 'yellow'
+        else
+            return sessionStorage.getItem('color')
+    }
+
     const board_border = 'black';
     const board_background = "white";
-    const snake_col = sessionStorage.getItem('color')
+    const snake_col = setItem()
     const snake_border = sessionStorage.getItem('border')
 
     let snake = [
