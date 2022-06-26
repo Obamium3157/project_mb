@@ -25,6 +25,7 @@ h3 {
 }
 
 .view {
+    background-color: white;
     transition-duration: 2s;
     display: grid;
     border: 0.3mm solid black;
@@ -36,9 +37,14 @@ h3 {
 }
 
 #view_color {
+    transition-duration: 2s;
     width: 300px;
     height: 300px;
-    margin: 10px 30%;
+    margin: 30px 30%;
+}
+
+#view_color:hover {
+    transform: scale(1.1, 1.1);
 }
 
 .description {
