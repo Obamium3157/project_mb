@@ -34,45 +34,15 @@
     <br>
     <h1 class="settings">Настройка</h1>
     <h3>Цвет змейки</h3>
-    <br>
-
-    <div class="color">
-        <select onchange="switch (this.selectedIndex) {
-    case 0: {
-        set_col('yellow')
-        sizeUP('view_color1')
-        break
-    }
-    case 1: {
-        set_col('lightblue')
-        sizeUP('view_color2')
-        break
-    }
-    case 2: {
-        set_col('red')
-        sizeUP('view_color3')
-        break
-    }
-    case 3: {
-        set_col('blue')
-        sizeUP('view_color4')
-        break
-    }
-}" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-            <option value="1">Жёлтый</option>
-            <option value="2">Светло-синий</option>
-            <option value="3">Красный</option>
-            <option value="4">Синий</option>
-        </select>
-    </div>
+    <h5 id="col_txt">(Текущий цвет: жёлтый)</h5>
 
     <br>
 
     <div class="view">
-        <img id="view_color1" src="img/yel.png" alt="Failed to load image">
-        <img id="view_color2" src="img/bb.png" alt="Failed to load image">
-        <img id="view_color3" src="img/red.png" alt="Failed to load image">
-        <img id="view_color4" src="img/blue.png" alt="Failed to load image">
+        <img class="view_item" id="view_color1" onclick="set_col('yellow')" src="img/yel.png" alt="Failed to load image">
+        <img class="view_item" id="view_color2" onclick="set_col('lightblue')" src="img/bb.png" alt="Failed to load image">
+        <img class="view_item" id="view_color3" onclick="set_col('red')" src="img/red.png" alt="Failed to load image">
+        <img class="view_item" id="view_color4" onclick="set_col('blue')" src="img/blue.png" alt="Failed to load image">
     </div>
 
     <div class="start">

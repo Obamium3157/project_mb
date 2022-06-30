@@ -11,13 +11,16 @@ h3 {
     text-align: center;
 }
 
+h5 {
+    text-align: center;
+}
+
 .color {
     text-align: center;
 }
 
 .view {
     background-color: white;
-    transition-duration: 2s;
     display: grid;
     border: 0.3mm solid black;
     border-radius: 15px;
@@ -29,28 +32,16 @@ h3 {
     grid-column-gap: 45px;
 }
 
-#view_color1 {
+#view_color1, #view_color2, #view_color3, #view_color4 {
+    transition-duration: 1.1s;
+    cursor: pointer;
     width: 300px;
     height: 300px;
     margin: 35px 0;
 }
 
-#view_color2 {
-    width: 300px;
-    height: 300px;
-    margin: 35px 0;
-}
-
-#view_color3 {
-    width: 300px;
-    height: 300px;
-    margin: 35px 0;
-}
-
-#view_color4 {
-    width: 300px;
-    height: 300px;
-    margin: 35px 0;
+#view_color1:hover, #view_color2:hover, #view_color3:hover, #view_color4:hover {
+    transform: scale(1.13);
 }
 
 .start {
