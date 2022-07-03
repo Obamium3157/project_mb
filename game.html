@@ -39,11 +39,20 @@
     }
 
     function changeHighScore() {
-        if(score > high_score) {
+        if(score > parseInt(high_score)) {
             localStorage.setItem('high_score', score)
-            high_score = score
+            high_score = score.toString()
         }
+
+
         document.getElementById('high_score').innerHTML = 'Рекорд: ' + high_score;
+    }
+
+    function init_high_score() {
+        if(localStorage.getItem('high_score') == null)
+            return '0'
+        else
+            return localStorage.getItem('high_score')
     }
 
     const board_border = 'black';
@@ -60,7 +69,7 @@
     ]
 
     let score = 0;
-    let high_score = parseInt(localStorage.getItem('high_score'))
+    let high_score = init_high_score();
     // True if changing direction
     let changing_direction = false;
     // Horizontal velocity
