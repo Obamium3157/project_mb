@@ -23,6 +23,7 @@
     </nav>
 
     <div id="score">0</div>
+    <div id="high_score">Рекорд: 0</div>
     <canvas id="snakeboard" width="400" height="400"></canvas>
     <div class="restartButton">
         <a href="game.html" id="r_btn" class="btn btn-primary btn-lg">Начать заново</a>
@@ -31,12 +32,19 @@
 </body>
 
 <script>
-
     function setItem() {
         if(sessionStorage.getItem('color') == null)
             return 'yellow'
         else
             return sessionStorage.getItem('color')
+    }
+
+    function changeHighScore() {
+        if(score > high_score) {
+            localStorage.setItem('high_score', score)
+            high_score = score
+        }
+        document.getElementById('high_score').innerHTML = 'Рекорд: ' + high_score;
     }
 
     const board_border = 'black';
@@ -53,6 +61,7 @@
     ]
 
     let score = 0;
+    let high_score = parseInt(localStorage.getItem('high_score'))
     // True if changing direction
     let changing_direction = false;
     // Horizontal velocity
@@ -65,7 +74,7 @@
 
     // Get the canvas element
     const snakeboard = document.getElementById("snakeboard");
-    // Return a two dimensional drawing context
+    // Return a two-dimensional drawing context
     const snakeboard_ctx = snakeboard.getContext("2d");
     // Start game
     main();
@@ -76,6 +85,7 @@
 
     // main function called repeatedly to keep the game running
     function main() {
+        document.getElementById('high_score').innerHTML = 'Рекорд: ' + high_score.toString();
 
         if (has_game_ended()) return;
 
@@ -198,6 +208,7 @@
         if (has_eaten_food) {
             // Increase score
             score += 10;
+            changeHighScore();
             // Display score on screen
             document.getElementById('score').innerHTML = score;
             // Generate new food location

@@ -25,3 +25,12 @@ body {
     top: 55%;
     left: 13%;
 }
+
+#high_score {
+    text-align: center;
+    font-size: 32pt;
+
+    position: absolute;
+    top: 55%;
+    right: 13%;
+}
