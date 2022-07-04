@@ -32,7 +32,7 @@
 <script>
 
     function showRestart() {
-        document.getElementById('restart').innerHTML = 'Нажмите R, чтобы начать заново'
+        document.getElementById('restart').innerHTML = 'Нажмите любую клавишу, чтобы начать заново'
     }
 
     function setItem() {
@@ -100,7 +100,6 @@
 
         if (has_game_ended()) {
             showRestart();
-            restart()
             return;
         }
 
@@ -214,7 +213,7 @@
             dy = 10;
         }
 
-        if(has_game_ended() && keyPressed === R_KEY)
+        if(has_game_ended() && keyPressed)
             location.reload()
     }
 
