@@ -11,19 +11,20 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 #score {
     text-align: center;
     font-size: 140px;
+    margin-bottom: 35px;
 }
 
 .restartButton {
-    justify-content: center;
-}
-
-#r_btn {
     position: absolute;
-    top: 55%;
-    left: 13%;
+    top: 40%;
+    left: 5.5%;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5em;
 }
 
 #high_score {

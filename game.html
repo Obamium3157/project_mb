@@ -25,12 +25,16 @@
     <div id="score">0</div>
     <div id="high_score">Рекорд: 0</div>
     <canvas id="snakeboard" width="400" height="400"></canvas>
-    <div class="restartButton">
-        <a href="game.html" id="r_btn" class="btn btn-primary btn-lg">Начать заново</a>
-    </div>
+
+    <div id="restart" class="restartButton"></div>
 </body>
 
 <script>
+
+    function showRestart() {
+        document.getElementById('restart').innerHTML = 'Нажмите R, чтобы начать заново'
+    }
+
     function setItem() {
         if(sessionStorage.getItem('color') == null)
             return 'yellow'
@@ -43,7 +47,6 @@
             localStorage.setItem('high_score', score)
             high_score = score.toString()
         }
-
 
         document.getElementById('high_score').innerHTML = 'Рекорд: ' + high_score;
     }
@@ -95,7 +98,11 @@
     function main() {
         document.getElementById('high_score').innerHTML = 'Рекорд: ' + high_score.toString();
 
-        if (has_game_ended()) return;
+        if (has_game_ended()) {
+            showRestart();
+            restart()
+            return;
+        }
 
         changing_direction = false;
         setTimeout(function onTick() {
@@ -179,6 +186,7 @@
         const RIGHT_KEY = 39;
         const UP_KEY = 38;
         const DOWN_KEY = 40;
+        const R_KEY = 82
 
         // Prevent the snake from reversing
 
@@ -205,6 +213,9 @@
             dx = 0;
             dy = 10;
         }
+
+        if(has_game_ended() && keyPressed === R_KEY)
+            location.reload()
     }
 
     function move_snake() {
