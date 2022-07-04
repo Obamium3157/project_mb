@@ -25,6 +25,8 @@ body {
     justify-content: center;
     text-align: center;
     font-size: 1.5em;
+
+    cursor: pointer;
 }
 
 #high_score {
